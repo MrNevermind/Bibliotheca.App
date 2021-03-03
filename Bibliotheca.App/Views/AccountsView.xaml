@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Bibliotheca.App.Views.AccountsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Bibliotheca.App.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button Command="{Binding NewAccountCommand}" Grid.Row="0" Content="New account" Width="80" Margin="5 5 100 0" HorizontalAlignment="Left"/>
+        <DataGrid Grid.Row="1" ItemsSource="{Binding Accounts}" AutoGenerateColumns="False" AlternatingRowBackground="LightGray" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="Phone Number" Binding="{Binding PhoneNumber}"/>
+                <DataGridTemplateColumn Header="">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Command="{Binding EditAccountCommand}" Content="Edit" Width="50" Margin="5 0 0 0"/>
+                                <Button Command="{Binding ShowTakenBooksCommand}" Content="Show taken books" Margin="5 0 0 0"/>
+                                <Button Command="{Binding DeleteAccountCommand}" Content="Delete" Width="50" Background="Red" Margin="5 0 0 0"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

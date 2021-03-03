@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Bibliotheca.App.Resources"
+                    xmlns:viewModel="clr-namespace:Bibliotheca.App.ViewModels"
+                    xmlns:view="clr-namespace:Bibliotheca.App.Views"
+                    >
+    <DataTemplate DataType="{x:Type viewModel:MainViewModel}">
+        <view:MainView/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type viewModel:BooksViewModel}">
+        <view:BooksView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:BookFormViewModel}">
+        <view:BookFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:BookTakeViewModel}">
+        <view:BookTakeView/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type viewModel:AccountsViewModel}">
+        <view:AccountsView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:AccountFormViewModel}">
+        <view:AccountFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:AccountTakenBooksViewModel}">
+        <view:AccountTakenBooksView/>
+    </DataTemplate>
+    
+</ResourceDictionary>

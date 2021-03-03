@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Bibliotheca.App.Resources"
+                    xmlns:c="clr-namespace:Bibliotheca.App.Converters"
+                    >
+
+    <c:BookStatusConverter x:Key="BookStatusConverter"/>
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ControlMaps.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+</ResourceDictionary>

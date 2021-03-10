@@ -12,15 +12,15 @@ namespace Bibliotheca.App.Models
     {
         public Account[] GetAccounts()
         {
-            return BibliothecaClient.ExecuteGet<Account[]>("accounts").GetAwaiter().GetResult();
+            return BibliothecaClient.ExecuteGet<Account[]>("accounts");
         }
         public Account GetAccount(int id)
         {
-            return BibliothecaClient.ExecuteGet<Account>($"accounts/{id}").GetAwaiter().GetResult();
+            return BibliothecaClient.ExecuteGet<Account>($"accounts/{id}");
         }
         public Book[] GetTakenBooks(int id)
         {
-            return BibliothecaClient.ExecuteGet<Book[]>($"accounts/{id}/books").GetAwaiter().GetResult();
+            return BibliothecaClient.ExecuteGet<Book[]>($"accounts/{id}/books");
         }
         public void TakeBook(int bookId, int accountId)
         {

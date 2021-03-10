@@ -17,15 +17,15 @@ namespace Bibliotheca.App.Models
 
         public Book[] GetBooks()
         {
-            return BibliothecaClient.ExecuteGet<Book[]>("books").GetAwaiter().GetResult();
+            return BibliothecaClient.ExecuteGet<Book[]>("books");
         }
         public Book GetBook(int id)
         {
-            return BibliothecaClient.ExecuteGet<Book>($"books/{id}").GetAwaiter().GetResult();
+            return BibliothecaClient.ExecuteGet<Book>($"books/{id}");
         }
         public string CheckBookStatus(string title)
         {
-            var status = BibliothecaClient.ExecuteGet<BookStatus?>($"books/{title}/check").GetAwaiter().GetResult();
+            var status = BibliothecaClient.ExecuteGet<BookStatus?>($"books/{title}/check");
             if (status.HasValue)
             {
                 if (status.Value == BookStatus.Available)

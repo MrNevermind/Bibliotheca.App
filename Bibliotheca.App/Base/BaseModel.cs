@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RestClient;
 
 namespace Bibliotheca.App.Base
 {
     public class BaseModel
     {
-        public RestClient BibliothecaClient;
+        public RestClient.RestClient BibliothecaClient;
 
         public BaseModel()
         {
-            BibliothecaClient = RestClient.CreateClient(Settings.BibliothecaApiEndpoint);
+            BibliothecaClient = RestClient.RestClient.CreateClient(Settings.BibliothecaApiEndpoint);
         }
     }
 }

@@ -8,6 +8,6 @@ namespace Bibliotheca.App
 {
     public static class Settings
     {
-        public static string BibliothecaApiEndpoint = "https://localhost:44348/api";
+        public static string BibliothecaApiEndpoint = "https://bibliothecaapi20210310214212.azurewebsites.net/api";
     }
 }
